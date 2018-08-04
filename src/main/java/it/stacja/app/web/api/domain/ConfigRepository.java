@@ -15,7 +15,11 @@ public class ConfigController {
 
     @PutMapping("/{name}")
     public String save(@PathVariable("name") String name,
-                       @RequestBody String config){
-
+                       @RequestBody String body){
+        Config config = new Config();
+        config.setName(name);
+        config.setConfig(body);
+        configRepository.save(config);
+        return "";
     }
 }
