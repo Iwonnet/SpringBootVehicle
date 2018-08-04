@@ -15,7 +15,10 @@ public class SimpleSpringExample {
 
         Car car = ctx.getBean(Car.class);
 
-        System.out.println(car);
+        StringService service = ctx.getBean(StringService.class);
+
+        String text = "Ala ma kota";
+        System.out.println(service.processString(text));
     }
 
 }
