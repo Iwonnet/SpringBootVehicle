@@ -21,6 +21,6 @@ public class InternalWykopRepository {// implements WykopRepository {
    // @Override
     public List<Wykop> findAll() {
 
-        return list;
+        return new ArrayList(list);
     }
 }
