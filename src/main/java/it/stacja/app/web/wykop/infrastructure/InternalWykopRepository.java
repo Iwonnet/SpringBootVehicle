@@ -6,19 +6,19 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class InternalWykopRepository implements WykopRepository {
+//@Component
+public class InternalWykopRepository {// implements WykopRepository {
 
     private List<Wykop> list = new ArrayList<>();
 
 
-    @Override
+   // @Override
     public void save(Wykop wykop) {
         list.add(wykop);
 
     }
 
-    @Override
+   // @Override
     public List<Wykop> findAll() {
 
         return list;
