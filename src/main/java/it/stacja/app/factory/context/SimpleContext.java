@@ -36,7 +36,13 @@ public class SimpleContext {
       return instances.get(classType);
   }
   try {
-    Object instance = constructor.newInstance();
+
+    Class[] types = constructor.getParameterTypes();
+    Object[] parameters = Arrays.stream(types).map(
+    this::resolve).toArray();
+
+
+    Object instance = constructor.newInstance(parameters);
     instances.put(classType, instance);
     return instance;
 
