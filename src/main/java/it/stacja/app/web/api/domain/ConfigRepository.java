@@ -22,4 +22,9 @@ public class ConfigController {
         configRepository.save(config);
         return "";
     }
+    @GetMapping("/{name}")
+    public String loadConfig(@PathVariable("name")String name){
+        Config config = configRepository.findById(name).orElse(new Config());
+        return config.getConfig();
+    }
 }
