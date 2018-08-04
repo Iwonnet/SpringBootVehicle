@@ -44,6 +44,14 @@ public class SimpleContext {
 
     Object instance = constructor.newInstance(parameters);
     instances.put(classType, instance);
+
+    if(!classType.isAnnotationPresent(Prototype.class)){
+      instances.put(classType, instance);
+    }
+
+
+
+
     return instance;
 
   } catch (Exception e){
