@@ -1,6 +1,7 @@
 package it.stacja.app.factory;
 
 import it.stacja.app.factory.context.SimpleContext;
+import it.stacja.app.factory.model.Car;
 import it.stacja.app.factory.model.Tire;
 
 public class ContextExample {
@@ -8,9 +9,13 @@ public class ContextExample {
 
         SimpleContext context = new SimpleContext("it.stacja.app.factory.model");
 
-       Tire tire = context.getElement(Tire.class);
+    //   Tire tire = context.getElement(Tire.class);
 
-       System.out.println(tire);
+    //   System.out.println(tire);
+
+        Car car = context.getElement(Car.class);
+
+        System.out.println(car);
 
     }
 }
