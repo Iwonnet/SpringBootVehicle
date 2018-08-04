@@ -1,0 +1,16 @@
+package it.stacja.app.factory;
+
+import it.stacja.app.factory.context.SimpleContext;
+import it.stacja.app.factory.model.Tire;
+
+public class ContextExample {
+    public static void main(String[] args) {
+
+        SimpleContext context = new SimpleContext("it.stacja.app.factory.model");
+
+       Tire tire = context.getElement(Tire.class);
+
+       System.out.println(tire);
+
+    }
+}

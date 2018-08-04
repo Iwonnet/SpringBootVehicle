@@ -32,13 +32,23 @@ public class SimpleContext {
   Constructor<?>[] constructors = classType.getConstructors();
   Constructor constructor = constructors[0];
 
+  if(instances.containsKey(classType)){
+      return instances.get(classType);
+  }
   try {
     Object instance = constructor.newInstance();
+    instances.put(classType, instance);
+    return instance;
+
   } catch (Exception e){
     e.printStackTrace();
   }
 
     return null;
+  }
+
+  public <T> T getElement(Class<T> aClass){
+      return (T) this.resolve(aClass);
   }
 
 
