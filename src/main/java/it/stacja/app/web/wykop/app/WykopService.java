@@ -8,6 +8,6 @@ public interface WykopService {
 
     void createWykop();
 
-    List<Wykop> findWykop();
+    List<Wykop> selectAll();
 
 }
