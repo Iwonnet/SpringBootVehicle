@@ -5,6 +5,7 @@ import it.stacja.app.factory.context.Prototype;
 
 @Component
 @Prototype
+@org.springframework.stereotype.Component
 public class Tire {
 
 }

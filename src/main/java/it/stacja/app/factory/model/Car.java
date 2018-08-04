@@ -8,6 +8,7 @@ import java.util.List;
 
 @Component
 @Prototype
+@org.springframework.stereotype.Component
 public class Car {
 
     private List<Wheel> wheels;
