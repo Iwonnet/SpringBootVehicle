@@ -11,6 +11,7 @@ import java.util.Set;
 
 public class SimpleContext {
 
+  private Map<Class<?>, Object> instances = new HashMap<>();
   private final String prefix;
 
   public SimpleContext(String prefix) {
