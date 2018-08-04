@@ -20,5 +20,7 @@ public class WykopFactory {
     public Wykop createWykop(CreateWykopRequest request){
         Wykop wykop = new Wykop(request.getName(), request.getDescription(), request.getUrl(),
                 imageResolver.resolveImageURL(request.getUrl()));
+        this.wykopRepository.save(wykop);
+        return wykop;
     }
 }
