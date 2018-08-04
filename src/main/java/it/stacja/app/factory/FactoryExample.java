@@ -20,7 +20,7 @@ public class FactoryExample {
         t = new Tire();
         Wheel wheel4 = new Wheel(t);
 
-        Car car = new Car(wheel1,wheel2,wheel4,wheel4);
+        Car car = new Car(wheel1,wheel2,wheel3,wheel4);
 
 
     }
