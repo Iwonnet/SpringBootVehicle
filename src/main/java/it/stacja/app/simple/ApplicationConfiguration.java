@@ -1,5 +1,6 @@
 package it.stacja.app.simple;
 
+import it.stacja.app.factory.model.Car;
 import it.stacja.app.factory.model.Tire;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
