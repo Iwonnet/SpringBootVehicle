@@ -18,6 +18,10 @@ public class WykopController {
 
     private WykopService wykopService;
 
+    public WykopController(WykopService wykopService) {
+        this.wykopService = wykopService;
+    }
+
     public void setWykopService(WykopService wykopService) {
         this.wykopService = wykopService;
     }
