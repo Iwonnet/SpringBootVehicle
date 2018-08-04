@@ -20,11 +20,13 @@ public class DefaultWykopService implements WykopService {
 
     @Override
     public void createWykop(CreateWykopRequest request) {
-
+        this.wykopFactory.createWykop(request);
     }
+
+
 
     @Override
     public List<Wykop> selectAll() {
-        return null;
+        return wykopRepository.findAll();
     }
 }
