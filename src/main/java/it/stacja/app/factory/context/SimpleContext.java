@@ -29,6 +29,13 @@ public class SimpleContext {
   private Object resolve(Class<?> classType) {
 
   Constructor<?>[] constructors = classType.getConstructors();
+  Constructor constructor = constructors[0];
+
+  try {
+    Object instance = constructor.newInstance();
+  } catch (Exception e){
+    e.printStackTrace();
+  }
 
     return null;
   }
