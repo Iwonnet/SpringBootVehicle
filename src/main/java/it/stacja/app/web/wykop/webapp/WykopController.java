@@ -15,7 +15,7 @@ public class WykopController {
     }
 
     @PostMapping("/add")
-    public void add(){
+    public void add(CreateWykopRequest request){
 
     }
 }
