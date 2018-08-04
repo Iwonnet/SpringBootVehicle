@@ -28,7 +28,7 @@ public class SimpleContext {
 
   private Object resolve(Class<?> classType) {
 
-
+  Constructor<?>[] constructors = classType.getConstructors();
 
     return null;
   }
