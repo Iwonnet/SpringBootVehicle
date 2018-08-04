@@ -1,5 +1,9 @@
 package it.stacja.app.simple;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class UpperStringService implements StringService {
 
 
